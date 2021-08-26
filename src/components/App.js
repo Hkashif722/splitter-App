@@ -35,9 +35,12 @@ function App() {
   console.log(flag);
   useEffect(() => {
     function calculate() {
-      let t_amount = (tipValue / bill) * 100;
+      let t_amount = ((tipValue / bill) * 100) / numPeople;
+      t_amount = t_amount === Infinity ? 0.0 : t_amount;
       setTipAmount(t_amount);
       let a_total = (bill + t_amount) / numPeople;
+      a_total = a_total === Infinity ? 0.0 : a_total;
+
       setTotal(a_total);
       setFlag(true);
     }
@@ -67,7 +70,7 @@ function App() {
             getPrice={price}
           />
           <Tip tip={tip} />
-          <People />
+          <People value={numPeople} />
           <InputLarge
             value={numPeople}
             icon={<i className="text-gray-300 fas fa-user"></i>}

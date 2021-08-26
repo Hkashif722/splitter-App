@@ -4,7 +4,11 @@ function InputLarge({ icon, label, value, getPrice }) {
   return (
     <div>
       <p className="text-sm pb-1">{label}</p>
-      <div className="lg-input-bgcolor px-2 py-3 rounded-sm items-center flex">
+      <div
+        className={`${
+          label !== "Bill" && value === 0 ? "hover:border-red-600" : "hover:border-blue-300"
+        }  border lg-input-bgcolor px-2 py-3 rounded-sm items-center flex`}
+      >
         {icon}
         <input
           onChange={(e) => getPrice(e.target.value)}
