@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+.letter {
+  letter-spacing: 0.5rem;
+}
+
+.primary {
+  background-color: hsl(185, 41%, 84%);
+}
+.small-input {
+  background-color: hsl(183, 100%, 15%);
+}
+.small-input-15 {
+  background-color: hsl(172, 67%, 45%);
+}
+.lg-input-bgcolor {
+  background-color: hsl(189, 41%, 97%);
+}
+::placeholder {
+  color: hsl(183, 100%, 15%);
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 100%, 15%);
+}
+
+.main-bg {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* @layer components {
+  .letter-space {
+    @apply px-4 py-2 mb-2 border rounded-full hover:cursor-pointer hover:shadow-lg active:scale-95 transition transform duration-100 ease-out active:bg-gray-100;
+  }
+} */
